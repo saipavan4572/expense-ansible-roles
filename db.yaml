@@ -1,0 +1,5 @@
+- name: configure DB server
+  hosts: db
+  become: yes
+  roles:        #ansible check for the "roles" folder and then "db" folder and then it will load main.yaml file
+  - db
