@@ -1,5 +1,12 @@
 #mysql_root_password: ExpenseApp@1
 login_host=db.pspkdevops.online
+
+
 # commented this because we created ansible-value file credentails.yaml file to use vars-files
 # also while running the command need to provide the vault auth password in the command
-# 
+
+# if we run the command without providing vault authorization..
+# [ ec2-user@ip-172-31-17-141 ~/expense-ansible-roles ]$ ansible-playbook db.yaml
+# ERROR! Attempting to decrypt but no vault secrets found
+
+# run the command by providing vault authorization..
