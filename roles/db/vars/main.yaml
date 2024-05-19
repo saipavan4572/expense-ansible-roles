@@ -3,8 +3,11 @@ login_host: db.pspkdevops.online
 # commented this because we created ansible-value file credentails.yaml file to use vars-files
 # also while running the command need to provide the vault auth password in the command
 
-# if we run the command without providing vault authorization..
+#1 if we run the command without providing vault authorization..
 # [ ec2-user@ip-172-31-17-141 ~/expense-ansible-roles ]$ ansible-playbook db.yaml
 # ERROR! Attempting to decrypt but no vault secrets found
 
-# run the command by providing vault authorization..
+#2 run the command by providing vault authorization..
+# [ ec2-user@ip-172-31-17-141 ~/expense-ansible-roles ]$ ansible-playbook db.yaml --ask-vault-pass
+# Vault password:
+# and it will continue to run the other commands
